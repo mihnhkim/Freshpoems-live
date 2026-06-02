@@ -1,1 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>신선한 시 있어요</title>
+  <style>
+    :root{
+      /* A4 비율: 가로:세로 = 1:1.414...  (세로형) */
+      --a4-w: 1;
+      --a4-h: 1.41421356;
+    }
 
+    html, body { margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100svh;
+      background: #111;
+    }
+
+    .frame {
+      width: min(100vw, calc(100svh * (var(--a4-w) / var(--a4-h))));
+      aspect-ratio: var(--a4-w) / var(--a4-h);
+      background: #000;
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <iframe
+      src="https://drive.google.com/file/d/1wl41dyQKoZTaurNs6-GXeZMS4TYklHHC/preview"
+      allowfullscreen
+    ></iframe>
+  </div>
+</body>
+</html>
